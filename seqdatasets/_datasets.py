@@ -52,6 +52,7 @@ def jores21(
     dataset="leaf", 
     download_dir: str = None,
     batch_size: int = 1000,
+    fixed_length=False,
     return_sdata: bool = True
 ):
     """
@@ -98,6 +99,7 @@ def jores21(
             tables=paths,
             out=outzarr,
             seq_col="sequence",
+            fixed_length=fixed_length,
             batch_size=batch_size,
             overwrite=True
         )
