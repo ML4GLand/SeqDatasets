@@ -1,0 +1,11 @@
+eugene.egg==info
+importlib_metadata==6.2.0
+importlib_metadata==6.1.0
+numpy==1.23.0
+numpy==1.23.5
+pandas==1.5.2
+seqdata.egg==info
+setuptools==67.6.0
+torch==2.0.0
+wget==3.2
+xarray==2023.4.0

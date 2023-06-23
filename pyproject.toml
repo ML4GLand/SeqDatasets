@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "seqdatasets"
+version = "0.1.0"
+description = "Datasets for benchmarking, testing and developing in EUGENe"
+authors = ["adamklie <aklie@ucsd.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+seqdata = "0.1.1"
+wget = "3.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

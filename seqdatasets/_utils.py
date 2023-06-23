@@ -8,7 +8,9 @@ import wget
 
 
 def get_download_path():
-    """Returns a path to download files to
+    """
+    Returns a path to download files to
+    
     If EUGENe is installed, returns the path specified in settings.dataset_dir
     Otherwise, creates a directory called 'seqdatasets' in the current working directory
     """

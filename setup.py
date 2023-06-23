@@ -9,9 +9,9 @@ requirements = []
 
 setup(
     name="seqdatasets",
-    version="0.0.1",
+    version="0.1.0",
     author="Adam Klie",
-    author_email="aklie@eng.ucsd.edu",
+    author_email="aklie@ucsd.edu",
     description="Datasets for benchmarking, testing and developing in EUGENe",
     long_description=readme,
     long_description_content_type="text/markdown",
@@ -19,7 +19,7 @@ setup(
     packages=find_packages(),
     install_requires=requirements,
     classifiers=[
-        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     ],
 )
