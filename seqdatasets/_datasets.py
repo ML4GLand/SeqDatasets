@@ -322,3 +322,15 @@ def deAlmeida22(
         return sdata
     else:
         return paths
+
+def kopp21(
+    dataset="jund_binary", 
+    download_dir: str = None,
+    batch_size: int = 1000,
+    return_sdata=True, 
+):
+    if dataset == "":
+        sdata = sd.open_zarr("/cellar/users/aklie/data/eugene/revision/kopp21/kopp21_test.zarr")
+    else:
+        raise ValueError("dataset must be either 'jund_binary' or 'jund_continuous'.")
+    return sdata
