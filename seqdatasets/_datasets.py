@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import subprocess
 
 import xarray as xr
 import pandas as pd
@@ -324,13 +325,30 @@ def deAlmeida22(
         return paths
 
 def kopp21(
-    dataset="jund_binary", 
+    task="binary",
+    split="test",
     download_dir: str = None,
-    batch_size: int = 1000,
     return_sdata=True, 
 ):
-    if dataset == "":
-        sdata = sd.open_zarr("/cellar/users/aklie/data/eugene/revision/kopp21/kopp21_test.zarr")
+    urls_list = [
+        "https://zenodo.org/record/8364130/files/kopp21_test.zarr.zip",
+        "https://zenodo.org/record/8364130/files/kopp21_train.zarr.zip",
+    ]
+    if task == "binary":
+        if split == "test":
+            data_idxs = [0]
+        elif split == "train":
+            data_idxs = [1]
+    elif task == "continuous":
+        raise NotImplementedError("Continuous task not implemented yet.")
+    download_dir = get_download_path() if download_dir is None else download_dir
+    zip_path = try_download_urls(data_idxs, urls_list, download_dir, "kopp21")[0]
+    outzarr = os.path.splitext(zip_path)[0]
+    if not os.path.exists(outzarr):
+        subprocess.run(["unzip", zip_path, "-d",  os.path.join(download_dir, "kopp21")])
+        subprocess.run(["rm", "-rf", os.path.join(download_dir, "kopp21", "__MACOSX")])
+    if return_sdata:
+        sdata = sd.open_zarr(outzarr)
+        return sdata
     else:
-        raise ValueError("dataset must be either 'jund_binary' or 'jund_continuous'.")
-    return sdata
+        return outzarr
