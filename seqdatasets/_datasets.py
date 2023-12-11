@@ -316,7 +316,6 @@ def deAlmeida22(
             meta_xr = xr.Dataset.from_dataframe(metadata)
             meta_xr = meta_xr.drop_vars("index").rename_dims({"index": "_sequence"}).assign(_sequence=sdata["_sequence"])
             sdata = sdata.merge(meta_xr)
-            sd.to_zarr(sdata, outzarr, mode="w")
         else:
             print("Zarr file found. Opening existing zarr file.")
             sdata = sd.open_zarr(outzarr)
