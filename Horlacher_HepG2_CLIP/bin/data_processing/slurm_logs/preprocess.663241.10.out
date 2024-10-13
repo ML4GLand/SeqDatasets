@@ -1,0 +1,16 @@
+Fri Dec 29 09:43:50 PST 2023
+Job ID: 663241
+
+/cm/local/apps/slurm/var/spool/job663241/slurm_script: line 19: activate: No such file or directory
+Running:
+ bash /cellar/users/aklie/data/datasets/Horlacher_HepG2_CLIP/bin/data_processing/preprocess_RBP.sh /cellar/users/aklie/data/datasets/Horlacher_HepG2_CLIP/processed/2023_12_29/encode/DDX20/ DDX20 100 0.01 15 5 4 /cellar/users/aklie/data/ref/genomes/hg38/GRCh38_EBV.chrom.sizes /cellar/users/aklie/data/ref/genomes/hg38/gencode.v40.basic.annotation.bed
+Processing: DDX20 from /cellar/users/aklie/data/datasets/Horlacher_HepG2_CLIP/processed/2023_12_29/encode/DDX20/
+Processing DDX20_control_1.bam for R2 reads, sorting, and indexing...
+[bam_sort_core] merging from 1 files and 1 in-memory blocks...
+No files found for DDX20_eCLIP
+Extracting 5' read-start coverage for DDX20_control_1.R2.sorted.bam
+Converting DDX20_control_1.R2.sorted.minus.bedGraph to DDX20_control_1.R2.sorted.neg.bw
+Converting DDX20_control_1.R2.sorted.plus.bedGraph to DDX20_control_1.R2.sorted.pos.bw
+Pipeline completed. Original BAMs, BigWigs, and peaks.bed files retained.
+Done.
+Fri Dec 29 09:46:34 PST 2023

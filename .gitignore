@@ -1,5 +1,10 @@
-# User 
-tests/
+# User
+processed/ 
+fastq/
+models/
+training/
+analysis/
+data/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
