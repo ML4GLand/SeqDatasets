@@ -144,3 +144,23 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+*.mat
+*.tar.gz
+*.h5sd
+*.h5
+*.h5ad
+*.bam
+*.bw
+*.npy
+*.npz
+*.pt
+*.ckpt
+/CRE_activity_prediction/
+/friedman21/
+/king20/
+/yuan22/
+/multitask_epigenomic_track_classification/
+/single_task_tf_binding_classification/
+/single_task_protein_binding_clasification/
+/zhou15/narrowPeak/
+/zhou15/regions/
